@@ -1,0 +1,209 @@
+body {
+  margin: 0;
+}
+.section {
+  padding: 1rem 2rem;
+}
+.details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+.form-control {
+  display: grid;
+  grid-gap: 0.5rem;
+}
+.form-control > label {
+  font-weight: bold;
+  color: rgba(0,0,0,0.75);
+  font-size: 0.875rem;
+}
+.form-control > input {
+  background: #fff;
+  border-radius: 2px;
+  border: 1px solid #d7d7e7;
+  font-size: 1.25rem;
+  padding: 10px 15px;
+  outline: none;
+}
+.toppings {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.5rem;
+}
+.topping {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 1rem;
+  align-items: center;
+  background: rgba(0,0,0,0.05);
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.topping.active {
+  background: #1a98e1;
+  color: white;
+}
+.topping > .img {
+  padding: 5px;
+  background: #e6e6e6;
+}
+.topping img {
+  display: block;
+  width: 35px;
+  height: 35px;
+}
+.summary {
+  padding: 0;
+  list-style: none;
+}
+.summary > li {
+  display: grid;
+  grid-gap: 5px;
+  align-items: center;
+  grid-template-columns: auto auto auto 1fr auto;
+  text-transform: capitalize;
+}
+.summary > li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.total {
+  text-align: right;
+  font-size: 1.25rem;
+}
+button[type="submit"] {
+  width: 100%;
+  background: #98C550;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.amount {
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  outline: 0;
+  background: rgba(0,0,0,0.05);
+  border-radius: 50%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button.amount:active {
+  background: #1a98e1;
+  color: white;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: rgba(0,0,0,0.75);
+}
+
+.modal-box {
+  border-top: 5px solid #98C550;
+  text-align: center;
+  background: white;
+  min-width: 400px;
+  margin-top: 10rem;
+  padding: 1rem 2.5rem;
+}
+
+.modal-box .address p {
+  margin: 0.5rem 0;
+}
+
+.modal-box hr {
+  margin: 1.5rem 0;
+}
+
+.modal-box .pizzas {
+  text-align: left;
+}
+
+.modal-box .pizza {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.modal-box .actions {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 1rem;
+}
+
+.modal-box .actions button {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-box .actions button.confirm {
+  background: #98C550;
+}
+
+.modal-box .actions button.cancel {
+  background: #e74c3c;
+}
+
+.sizes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.size {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 1rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.size > .pizza {
+  border: 8px solid transparent;
+  border-radius: 50%;
+}
+
+.size:hover > .pizza {
+  border-color: #e6e6e6;
+}
+
+.size.active > .pizza {
+  border-color: #e6e6e6;
+}
+
+.size > .pizza.large {
+  height: 5rem;
+}
+
+.size > .pizza.medium {
+  height: 4rem;
+}
+
+.size > .pizza.small {
+  height: 3rem;
+}
+
+.size > span {
+  text-transform: capitalize;
+}
